@@ -92,6 +92,8 @@
 
 <!-- 01 HERO -->
 <section class="section hero" id="apps" data-title="The apps">
+  <div class="hero-vortex" id="heroVortex" aria-hidden="true"></div>
+  <div class="hero-shade" aria-hidden="true"></div>
   <div class="grid-bg" aria-hidden="true"></div>
   <div class="crumb"><span>01</span> / The apps</div>
   <div class="hero-inner">
@@ -367,5 +369,10 @@
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="app.js"></script>
+<script type="module">
+  import { mountVortex } from "./assets/vortex.js";
+  // ChatBridge blue, OneNote Style violet, Brain Capture orange
+  mountVortex(document.getElementById("heroVortex"), { palette: ["#5b8cff", "#b067ff", "#ff8a3d"], bg: "#0c0d0f", label: false });
+</script>
 </body>
 </html>
